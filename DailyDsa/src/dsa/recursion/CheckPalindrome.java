@@ -6,6 +6,7 @@ public class CheckPalindrome {
         System.out.println("Is palindrome ? "+isPalindromeIterativeWay(str) );
         System.out.println("Is palindrome ? "+isPalindromeRecursiveWay(str,0, str.length()-1) );
 
+
     }
 
     private static boolean isPalindromeRecursiveWay(String str, int i, int j) {
