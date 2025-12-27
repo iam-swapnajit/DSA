@@ -5,8 +5,7 @@ import java.util.Map;
 
 /**
  * Leetcode problem number 70
- *
- * https://leetcode.com/problems/climbing-stairs/
+ * <a href="https://leetcode.com/problems/climbing-stairs/">...</a>
  */
 public class ClimbStairs {
     public static void main(String[] args) {
@@ -16,9 +15,7 @@ public class ClimbStairs {
     }
 
     /**
-     *
      * This will run into Time Limit Exceeded error
-     *
      */
     private static int climbStairs(int n) {
         if(n <= 1)
