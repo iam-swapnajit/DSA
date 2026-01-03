@@ -15,15 +15,11 @@ public class RemoveDuplicatesFromSortedArray {
 
     private static int removeDuplicates(int[] arr) {
         int uniqueIndex =0;
-        /*if(arr.length == 1){
-            return 1;
-        }*/
         for(int index = 0; index <arr.length; index++){
             if(arr[index] > arr[uniqueIndex]){
                 uniqueIndex = uniqueIndex+1;
                 arr[uniqueIndex] = arr[index];
             }
-
         }
         System.out.println(Arrays.toString(arr));
         return  uniqueIndex+1;
