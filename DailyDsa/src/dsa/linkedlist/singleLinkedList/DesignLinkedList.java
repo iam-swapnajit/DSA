@@ -7,6 +7,7 @@ public class DesignLinkedList {
         myLinkedList.addAtHead(1);
         myLinkedList.addAtTail(3);
         myLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3
+        System.out.println("middle element "+ myLinkedList.findMiddleElement().val);
         System.out.println(myLinkedList.get(1));            // return 2
         myLinkedList.deleteAtIndex(1);    // now the linked list is 1->3
         System.out.println(myLinkedList.get(1));
@@ -23,6 +24,17 @@ public class DesignLinkedList {
             }
 
             return  curr.val;
+        }
+
+        public Node findMiddleElement(){
+            Node slow = this.head;
+            Node fast = this.head;
+
+            while (fast != null && fast.next !=null){
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow;
         }
 
         public void addAtHead(int val) {
