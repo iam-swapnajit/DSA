@@ -1,5 +1,8 @@
 package dsa.slidingwindow;
 
+/**
+ * <a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/1888866821/">...</a>
+ */
 public class FindTheFirstOccurence {
     public static void main(String[] args) {
         String haystack = "ssand", needle = "ad";
