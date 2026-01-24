@@ -23,6 +23,18 @@ public class BinaryTree {
         inTraverse(curr.right);
     }
 
+    public List<Integer> postorderTraversal(TreeNode root){
+        ans.clear();
+        postTraverse(root);
+        return ans;
+    }
+    public void postTraverse(TreeNode curr){
+        if(curr==null) return;
+        postTraverse(curr.left);
+        postTraverse(curr.right);
+        ans.add(curr.val);
+    }
+
     // Preorder traversal method
     public List<Integer> preorderTraversal(TreeNode root) {
         ans.clear();          // important if method is called multiple times
@@ -64,5 +76,9 @@ public class BinaryTree {
         List<Integer> inOrderResult = tree.inorderTraversal(root);
 
         System.out.println("Inorder Traversal: " + inOrderResult);
+
+        List<Integer> postOrderResult = tree.postorderTraversal(root);
+
+        System.out.println("PostOrder Traversal: " + postOrderResult);
     }
 }
