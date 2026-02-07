@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class ClimbStairs {
     public static void main(String[] args) {
-        int n = 2 ;
+        int n = 4;
         System.out.println("Number of ways to climb " +n +" steps is "+ climbStairs(n));
         System.out.println("Number of ways to climb " +n +" steps is "+ climbStairsUsingDP(n));
     }
@@ -29,8 +29,8 @@ public class ClimbStairs {
      * Optimized code using DP
      */
     private static int climbStairsUsingDP(int n) {
-        if(n <= 1)
-            return 1;
+        if(n <= 2)
+            return n;
         if(cache.containsKey(n))
             return cache.get(n);
         int steps = climbStairs(n-1) + climbStairs(n-2);
