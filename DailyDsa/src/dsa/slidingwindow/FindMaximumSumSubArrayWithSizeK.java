@@ -2,8 +2,8 @@ package dsa.slidingwindow;
 
 public class FindMaximumSumSubArrayWithSizeK {
     public static void main(String[] args) {
-        int[] arr = {200,300,400,500};
-        System.out.println(findMaximumSum2(arr, 2));
+        int[] arr = {200,300};
+        System.out.println(findMaximumSum2(arr, 3));
     }
 
     public static int findMaximumSum(int[] arr , int k){
@@ -19,8 +19,9 @@ public class FindMaximumSumSubArrayWithSizeK {
         //sliding window
         for(int i=k ; i< arr.length ; i++){
             sum = sum - arr[i-k] + arr[i];
-            maxSum = Math.max(maxSum, sum);
+
         }
+        maxSum = Math.max(maxSum, sum);
         return maxSum;
     }
 
